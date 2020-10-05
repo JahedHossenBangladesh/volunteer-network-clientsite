@@ -8,7 +8,7 @@ const SelectedEvent = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 useEffect(() => {
-    fetch('http://localhost:5000/selected?email='+loggedInUser.email,{
+    fetch('https://vast-brook-72942.herokuapp.com/selected?email='+loggedInUser.email,{
         method:'GET',
         headers:{
             'Content-Type': 'application/js',
@@ -22,7 +22,7 @@ console.log(selectedEvent);
 
 function dlt(id){
   
- fetch(`http://localhost:5000/delete/${id}`,{
+ fetch(`https://vast-brook-72942.herokuapp.com/delete/${id}`,{
      method:'DELETE'
  })
  .then(res => res.json())

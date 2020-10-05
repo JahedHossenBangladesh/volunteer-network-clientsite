@@ -41,7 +41,7 @@ const Forms = () => {
       };
       const handleEvents =() => {
         const newEvent ={...loggedInUser,...selectedDate,btn}
-        fetch('http://localhost:5000/addEvent',{
+        fetch('https://vast-brook-72942.herokuapp.com/addEvent',{
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify(newEvent)
