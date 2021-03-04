@@ -1,0 +1,5 @@
+.googleSignIn:hover {
+  background: black;
+  color: white;
+  border-radius: 5px solid red;
+}

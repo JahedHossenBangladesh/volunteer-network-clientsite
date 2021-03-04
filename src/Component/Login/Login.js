@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from './firebase.config'
+import React, { useContext } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
+import firebaseConfig from './firebase.config';
+import './Login.css';
 
 const Login = () => {
 
@@ -43,10 +44,30 @@ const Login = () => {
 
 
     return (
-        <div>
-            <h1>This is Login</h1>
-            <button onClick={handleGoogleSignIn}>Google Sign in</button>
+        <>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin">
+              <button class="btn btn-lg btn-google btn-block text-uppercase googleSignIn " type="submit"   onClick={handleGoogleSignIn}><i class="fab fa-google mr-2 "></i> Sign in with Google</button>
+             
+            </form>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+
+            
+           
+        </>
     );
 };
 
